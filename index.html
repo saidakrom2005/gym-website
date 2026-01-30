@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="adaptive company c210_stroiteh" lang="ru" xml:lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="Фитнес-UMI - это фитнес-клуб в СПб, где вы сможете заняться тем спортом, который вам по душе. У нас есть тренажерный зал, бассейн, спортивные секции для взрослых и детей." />
+    <meta name="keywords" content="фитнес спб, фитнес клуб спб" />
+    <title>Фитнес-клуб СПБ Фитнес-UMI - спорт на любой вкус и цвет</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="decor.css" />
+    <link id="color-scheme-file" type="text/css" rel="stylesheet" href="orange.css" />
+    <script type="text/javascript">
+        if (window != window.top) {
+            var domain = "umi.ru";
+            document.domain = domain.replace(window.location.protocol + '//', '');
+        }
+    </script>
+    <script type="text/javascript" charset="utf-8" src="jquery.compiled_custom.js"></script>
+    <script type="text/javascript">jQuery(function (a) { a.datepicker.setDefaults(a.datepicker.regional.ru); });</script>
+    <link type="text/css" rel="stylesheet" href="jquery.fancybox-1.3.4.css" />
+    <script type="text/javascript" charset="utf-8" src="guest.js"></script>
+    <script charset="utf-8" src="/js/base-template.js"
+        type="text/javascript"></script>
+    <script>
+        var newOffersImport = parseInt('') || 0;
+        var isApplyCurrency = parseInt('Ваших прав недостаточно, чтобы совершить это действие.') || 0;
+    </script>
+    <meta property="og:image"
+        content="pngtree_fitness_design_3532634.jpg" />
+    <script src="performance.monitor.js"></script>
+    <script>
+        $(document).ready(function () {
+            (function () {
+                this.users.init(this);
+            }).call(application);
+        });
+    </script>
+    <script>
+        var itemDiscounts = {};
+    </script>
+    <style>
+        #cookie-notification {
+            box-sizing: unset;
+            position: fixed;
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1000;
+            bottom: 30px;
+            left: 30px;
+            background-color: #F6F7F8;
+            box-shadow: 0 2px 25px rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            padding: 16px;
+            width: 463px;
+            height: 36px;
+            font-size: 13px;
+            line-height: normal;
+        }
+
+        #cookie-notification a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #cookie-notification p {
+            color: #939393;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        #accept-cookies {
+            background-color: #666666;
+            width: 91px;
+            height: 33px;
+            color: #FFFFFF;
+            border-radius: 3px;
+            border-color: unset;
+            border-style: none;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #accept-cookies p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            #cookie-notification {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 622px) {
+            #cookie-notification {
+                bottom: 90px;
+            }
+        }
+
+        @media (max-width: 505px) {
+            #cookie-notification {
+                width: 326px;
+                height: 42px;
+            }
+        }
+    </style>
+    <script>
+        /** Функционал уведомлений о куках. */
+
+        /** @type {string} Название куки. */
+        var cookieNotificationName = "cookiesAccepted";
+
+        /** @type {number} Количество дней жизни куки. */
+        var cookieNotificationDaysLifeTime = 365;
+
+        /** @type {?HTMLElement} Элемент уведомления. */
+        var cookieNotification;
+
+        /**
+         * Инициализирует функционал уведомления о куках.
+         * @return {void}
+         */
+        function initCookieNotification() {
+            if (getCookiesAccepted()) {
+                return;
+            }
+
+            cookieNotification = document.getElementById('cookie-notification');
+            if (!cookieNotification) {
+                return;
+            }
+
+            showCookieNotification();
+
+            document.getElementById('accept-cookies').addEventListener('click', function () {
+                setCookiesAccepted();
+                hideCookieNotification();
+            });
+        }
+
+        /**
+         * Возвращает значение куки.
+         * @return {boolean}
+         */
+        function getCookiesAccepted() {
+            var cookies = document.cookie.split('; ');
+            for (var i = 0; i < cookies.length; i++) {
+                if (cookies[i].split('=')[0] === cookieNotificationName) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /**
+         * Устанавливает значение куки.
+         * @return {void}
+         */
+        function setCookiesAccepted() {
+            var date = new Date();
+            date.setTime(date.getTime() + (cookieNotificationDaysLifeTime * 24 * 60 * 60 * 1000));
+            document.cookie = cookieNotificationName + '=1; expires=' + date.toUTCString() + '; Path=/';
+        }
+
+        /**
+         * Показывает уведомление.
+         * @return {void}
+         */
+        function showCookieNotification() {
+            cookieNotification.style.display = 'flex';
+        }
+
+        /**
+         * Скрывает уведомление.
+         * @return {void}
+         */
+        function hideCookieNotification() {
+            cookieNotification.style.display = 'none';
+        }
+
+        window.addEventListener('DOMContentLoaded', function () {
+            initCookieNotification();
+        });
+
+    </script>
+    <div id="cookie-notification">
+        <div>
+            <p>Мы используем <a href="/pdn/" target="_blank">файлы cookie</a></p>
+            <p>и системы аналитики для улучшения работы сайта</p>
+        </div><button id="accept-cookies">Принять</button>
+    </div>
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // Animation init
+            if (navigator.userAgent.match(/iPad/i) == null) {
+
+                setTimeout(function () {
+                    $('.custom_wrapper_1').addClass('customing');
+                }, 500);
+
+                setTimeout(function () {
+                    $('.direction_block_2').addClass('customing');
+                }, 1300);
+
+                setTimeout(function () {
+                    $('.custom_wrapper_2').addClass('customing');
+                }, 2100);
+            } else {
+                $('.custom_wrapper_1').removeClass('custom_wrapper_1')
+                    .removeClass('stc1')
+                    .addClass('custom_wrapper_ipad_1');
+                $('.custom_wrapper_2').removeClass('custom_wrapper_2')
+                    .removeClass('stc2')
+                    .addClass('custom_wrapper_ipad_2');
+                $('.main_image img').addClass('ipad_img');
+            }
+
+            // Menu - cover height
+            if ($('.level-0').height() == '110') {
+                $('.level-0').closest('.umi-menu').css('top', '6px');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="general_wrap">
+        <div class="row-fluid top-menu">
+            <div class="span12 pos-rel">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="header_brand">
+                            <div class="logotype"><a  href="#/" data-page="home" class="logo"><img
+                                        alt="Фитнес-клуб СПБ Фитнес-UMI - спорт на любой вкус и цвет"
+                                        title="Фитнес-клуб СПБ Фитнес-UMI - спорт на любой вкус и цвет"
+                                        src="img/pngtree_fitness_design_3532634_300_auto.jpg" /></a>
+                            </div>
+                            <div class="company_name">
+                                <p>Umi-fitness</p>
+                            </div>
+                        </div>
+                        <div class="header_contacts">
+                            <div class="span7 addr"><span class="address_string">г. Санкт-Петербург, ул. Добрая, дом
+                                    66</span></div>
+                            <div class="span5 phone"><span class="phone_number">+7 (812) 555-55-555</span></div>
+                        </div>
+                        <div class="for-menu">
+                            <div class="nav-wrap">
+                                <div class="row-fluid umi-menu">
+                                    <div class="span12">
+                                        <div class="navbar">
+                                            <div class="navbar-inner">
+                                                <div class="container"><button type="button"
+                                                        class="btn btn-umi-shop b-navbar" data-toggle="collapse"
+                                                        data-target=".nav-collapse">≡
+                                                    </button>
+                                                    <div class="nav-collapse collapse">
+                                                        <ul class="level-0">
+                                                            <li data-id="1" class="first current "><a
+                                                                    a href="#/" data-page="home">Главная</a></li>
+                                                            <li data-id="658" class="even "><a
+                                                                    href="#/timetable" data-page="timetable">Расписание</a>
+                                                                <ul class="level-1">
+                                                                    <li data-id="671" class="first last "><a
+                                                                            href="#/timetable" data-page="timetable">Расписание
+                                                                            Mobifitness</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li data-id="660" class=""><a
+                                                                    href="#/abonements" data-page="abonements">Абонементы</a></li>
+                                                            <li data-id="661" class="even "><a href="#/clubs" data-page="clubs">Наши
+                                                                    клубы</a></li>
+                                                            <li data-id="662" class=""><a
+                                                                    href="#/news" data-page="news">Новости и акции</a></li>
+                                                            <li data-id="659" class="even "><a
+                                                                     href="#/ourclasses" data-page="ourclasses">Наши занятия и
+                                                                    секции</a>
+                                                                <ul class="level-1">
+                                                                    <li data-id="668" class="first "><a
+                                                                            href="/nashi_zanyatiya_i_sekcii/bassejn/">Бассейн</a>
+                                                                    </li>
+                                                                    <li data-id="667" class="even "><a
+                                                                            href="/nashi_zanyatiya_i_sekcii/trenazhernyj_zal/">Тренажерный
+                                                                            зал</a></li>
+                                                                    <li data-id="666" class=""><a
+                                                                            href="/nashi_zanyatiya_i_sekcii/detskij_fitnes/">Детский
+                                                                            фитнес</a></li>
+                                                                    <li data-id="665" class="even "><a
+                                                                            href="/nashi_zanyatiya_i_sekcii/fitness_yoga/">Fitness
+                                                                            Yoga</a></li>
+                                                                    <li data-id="664" class=""><a
+                                                                            href="/nashi_zanyatiya_i_sekcii/pilates/">Пилатес</a>
+                                                                    </li>
+                                                                    <li data-id="663" class="last even "><a
+                                                                            href="/nashi_zanyatiya_i_sekcii/krossfit/">Кроссфит</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li data-id="652" class=""><a  href="#/aboutus" data-page="aboutus">О нас</a>
+                                                                <ul class="level-1">
+                                                                    <li data-id="656" class="first "><a
+                                                                            href="/o_nas/nashi_trenery/">Наши
+                                                                            тренеры</a></li>
+                                                                    <li data-id="657" class="last even "><a
+                                                                            href="/o_nas/obuchenie/">Обучение</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li data-id="553" class="last even "><a
+                                                                     href="#/contact" data-page="contact">Контакты</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="app-content">
+
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            <div class="footer_brand">
+                <div class="logotype"><a class="logo" href="#/" data-page="home"><img
+                            alt="Фитнес-клуб СПБ Фитнес-UMI - спорт на любой вкус и цвет"
+                            title="Фитнес-клуб СПБ Фитнес-UMI - спорт на любой вкус и цвет"
+                            src="img/pngtree_fitness_design_3532634_300_auto.jpg" /></a>
+                </div>
+                <div class="company_name">
+                    <p>Umi-fitness</p>
+                </div>
+            </div>
+            <div class="row-fluid umi-footer">
+                <div class="footer_contacts">
+                    <div class="addr"><span class="address_string">г. Санкт-Петербург, ул. Добрая, дом 66</span></div>
+                    <div class="phone"><span class="phone_number">+7 (812) 555-55-555</span></div>
+                </div>
+                <div class="span3 cp">
+                    <div class="text">
+                        <p><a href='/pdn/' target='_blank'>Политика конфиденциальности</a></p>
+                    </div>
+                    <div class="copy_wrap opener">
+                        <div id="copy_button" class="copy-del-button hidden"><span class="buttonx"><img
+                                    src="img/del_button.svg" alt="×" /></span><span
+                                class="buttontext">Убрать копирайт</span></div>
+                        <div class="text copyright">
+                            <p>Сайт создан на <a href="https://umi.ru/">1C-UMI</a></p>
+                        </div>
+                    </div>
+                    <div class="text umi-copyright">
+                        <p>Работает на <a href="https://www.umi-cms.ru" rel="nofollow">UMI.CMS</a></p>
+                    </div>
+                    <div class="text" id="site-rss">
+                        <p><a href="/files/rss/rss.xml" title="Подписаться на RSS" id="site_rss_link"><img
+                                    src="/base-img/siterss.png" title="Подписаться на RSS"
+                                    id="site_rss_icon" /><span>Подписаться на RSS</span></a></p>
+                    </div>
+                </div>
+                <div class="social_and_search">
+                    <div class="social">
+                        <div class="addthis_toolbox social_gray" id="social_block"><a class="social_button social_vk"
+                                rel="nofollow" href="https://vkontakte.ru" title="Поделиться ВКонтакте"
+                                onclick="return application.socialButtons.open('vk');"></a><a
+                                class="social_button social_odnoklassniki" rel="nofollow"
+                                href="https://odnoklassniki.ru" title="Поделиться в Одноклассниках"
+                                onclick="return application.socialButtons.open('odnoklassniki');"></a><a
+                                class="social_button social_mir" rel="nofollow" href="https://my.mail.ru"
+                                title="Поделиться в Моём мире"
+                                onclick="return application.socialButtons.open('moimir');"></a><a
+                                class="social_button social_livejournal" rel="nofollow" href="https://livejournal.com"
+                                title="Поделиться в LiveJournal"
+                                onclick="return application.socialButtons.open('livejournal');"></a><a
+                                class="social_button social_liveinternet" rel="nofollow" href="https://liveinternet.ru"
+                                title="Поделиться в LiveInternet"
+                                onclick="return application.socialButtons.open('liveinternet');"></a>
+                            <div class="cleaner"></div>
+                        </div>
+                    </div>
+                    <div class="search" id="min_lens">
+                        <form action="/search/search_do/" method="get" class="search_form search2">
+                            <fieldset><input title="Поиск" class="form_placeholder search_form_string"
+                                    autocomplete="off" type="text" size="20" value="" name="search_string" /><input
+                                    class="submit_button " type="submit" value="" /></fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="span12 code_wrapper">
+                    <div class="text code_pre code_footer"></div>
+                </div>
+            </div>
+        </div>
+    </div><a id="main_big_order_button" class="callback" href="#ajax#ajax-order-form.1.ajax" title="Обратная связь">
+        <div class="thumbnail_holder"
+            style="max-width:60px;width:31px;height:130px;background-image:url(/images/cms/thumbs/134b8921993b656883563f7e08a8df9cce80e63c/feedback_button_60_auto.jpg)"
+            rel="/images/cms/thumbs/134b8921993b656883563f7e08a8df9cce80e63c/feedback_button_60_auto.jpg"></div>
+    </a>
+    <script src="script.js"></script>
+</body>
+
+</html>
