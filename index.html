@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
         content="Фитнес-UMI - это фитнес-клуб в СПб, где вы сможете заняться тем спортом, который вам по душе. У нас есть тренажерный зал, бассейн, спортивные секции для взрослых и детей." />
     <meta name="keywords" content="фитнес спб, фитнес клуб спб" />
@@ -12,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="style.css" />
     <link type="text/css" rel="stylesheet" href="decor.css" />
     <link id="color-scheme-file" type="text/css" rel="stylesheet" href="orange.css" />
+    <link type="text/css" rel="stylesheet" href="media.css" />
     <script type="text/javascript">
         if (window != window.top) {
             var domain = "umi.ru";
@@ -28,6 +30,7 @@
         var newOffersImport = parseInt('') || 0;
         var isApplyCurrency = parseInt('Ваших прав недостаточно, чтобы совершить это действие.') || 0;
     </script>
+    
     <meta property="og:image"
         content="pngtree_fitness_design_3532634.jpg" />
     <script src="performance.monitor.js"></script>
@@ -188,12 +191,12 @@
         });
 
     </script>
-    <div id="cookie-notification">
+    <!-- <div id="cookie-notification">
         <div>
             <p>Мы используем <a href="/pdn/" target="_blank">файлы cookie</a></p>
             <p>и системы аналитики для улучшения работы сайта</p>
         </div><button id="accept-cookies">Принять</button>
-    </div>
+    </div> -->
     <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0" />
     <script type="text/javascript">
         $(document).ready(function () {
@@ -228,6 +231,7 @@
             }
         });
     </script>
+    <link rel="stylesheet" href="media.css">
 </head>
 
 <body>
@@ -247,9 +251,19 @@
                             </div>
                         </div>
                         <div class="header_contacts">
-                            <div class="span7 addr"><span class="address_string">г. Санкт-Петербург, ул. Добрая, дом
+                            <!-- <div class="span7 addr"><span class="address_string">г. Санкт-Петербург, ул. Добрая, дом
                                     66</span></div>
-                            <div class="span5 phone"><span class="phone_number">+7 (812) 555-55-555</span></div>
+                            <div class="span5 phone"><span class="phone_number">+7 (812) 555-55-555</span></div> -->
+                            <div class="language-dropdown">
+                                <button class="lang-toggle" data-toggle="collapse" data-target=".lang-menu">RU ▼</button>
+                                <div class="lang-menu collapse">
+                                    <ul>
+                                        <li><a href="#" class="lang-option" data-lang="ru">Русский</a></li>
+                                        <li><a href="#" class="lang-option" data-lang="en">English</a></li>
+                                        <li><a href="#" class="lang-option" data-lang="es">O'zbekcha</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="for-menu">
                             <div class="nav-wrap">

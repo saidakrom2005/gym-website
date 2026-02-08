@@ -268,6 +268,8 @@
     margin-left: 72px;
     padding-top: 60px;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .adaptive .top-menu .header_contacts:before {
@@ -2564,11 +2566,6 @@ html body .copy_wrap.opener .copy-del-button {
 
 }
 
-@media (max-width:700px) {
-
-    .adaptive .top-menu .header_contacts {
-        display: none;
-    }
 
     .adaptive .top-menu .for-menu {
         margin: auto 40px auto auto;
@@ -2595,9 +2592,6 @@ html body .copy_wrap.opener .copy-del-button {
     .adaptive .footer .footer-in .cp div {
         margin-left: 0;
     }
-
-
-}
 
 @media (max-width:600px) {
 
@@ -2762,10 +2756,6 @@ html body .copy_wrap.opener .copy-del-button {
 
     .adaptive .top-menu > .pos-rel > .container {
         padding: 0;
-    }
-
-    .adaptive .top-menu .header_contacts {
-        display: none;
     }
 
     .adaptive .top-menu .nav-wrap {
@@ -3204,7 +3194,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, .h4, .h5, .h6,
 }
 .adaptive .general_wrap table {
 	padding: 0 30px 35px;
-  background: rgba(0,0,0,.7);
+    background: rgba(0,0,0, 0);
 }
 .adaptive a, .adaptive a:hover, .adaptive a:focus, .adaptive a:visited {
 	color: #b21918;
