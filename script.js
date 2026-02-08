@@ -1871,6 +1871,11 @@ const pages = {
     `,
 }
 
+// Create aliases for pages with 's' suffix to match data-page attributes
+pages.abonementsRU = pages.abonementRU;
+pages.abonementsENG = pages.abonementENG;
+pages.abonementsUZ = pages.abonementUZ;
+
 // Router function with language support
 function router() {
     const hash = window.location.hash.substring(2) || '/';
@@ -1981,8 +1986,8 @@ const setupLanguageDropdown = () => {
             localStorage.setItem('selectedLanguage', lang);
             updateLanguageDisplay(lang);
             
-            // Close dropdown after selection
-            const langMenu = document.querySelector('.lang-menu');
+            // Close dropdown after selection - target the new class
+            const langMenu = document.querySelector('.lang-menu-dropdown');
             if (langMenu && langMenu.classList.contains('in')) {
                 langMenu.classList.remove('in');
             }
